@@ -1,0 +1,9 @@
+<div class="project-headline" [class.project-headline_right]="position === 'right'">
+  <h3>{{ title }}</h3>
+
+  <ul class="technologies">
+    @for (technology of technologies; track technology) {
+      <li>{{ technology }}</li>
+    }
+  </ul>
+</div>
