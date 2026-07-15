@@ -1,0 +1,23 @@
+<div
+  class="portfolio-image"
+  [class.portfolio-image_project]="variant === 'project'"
+>
+  <img
+    class="portfolio-image__img"
+    [src]="src"
+    [alt]="alt"
+    [attr.width]="width"
+    [attr.height]="height"
+  />
+
+  @if (variant === 'project') {
+    <img
+      class="portfolio-image__arrow"
+      [class.portfolio-image__arrow_left]="arrowPosition === 'left'"
+      [class.portfolio-image__arrow_right]="arrowPosition === 'right'"
+      src="/assets/img/project-arrow.svg"
+      alt=""
+      aria-hidden="true"
+    />
+  }
+</div>
