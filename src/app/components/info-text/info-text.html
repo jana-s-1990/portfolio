@@ -1,0 +1,12 @@
+<div
+  class="info-text"
+  [class.info-text_right]="position === 'right'"
+  [class.info-text_small]="size === 'small'"
+  [class.info-text_medium]="size === 'medium'"
+  [class.info-text_large]="size === 'large'"
+>
+  @if (iconSrc) {
+    <img class="info-text__icon" [src]="iconSrc" [alt]="iconAlt" />
+  }
+  <p class="info-text__content"><ng-content></ng-content></p>
+</div>

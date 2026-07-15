@@ -1,0 +1,14 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-info-text',
+  imports: [],
+  templateUrl: './info-text.html',
+  styleUrl: './info-text.scss',
+})
+export class InfoText {
+  @Input() position: 'left' | 'right' = 'left';
+  @Input() size: 'small' | 'medium' | 'large' = 'medium';
+  @Input() iconSrc: string | null = null;
+  @Input() iconAlt = '';
+}

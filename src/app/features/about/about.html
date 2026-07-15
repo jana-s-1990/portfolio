@@ -1,26 +1,36 @@
 <app-headline position="left">About me</app-headline>
-<p>
-  Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you
-  passionate about coding? What is your source of inspiration for improving your programming skills?
-  Do you learn from each challenge as you search for the most efficient or elegant solution?
-</p>
-<p>Let’s collaborate and build something remarkable together!</p>
-<app-button position="center">Let's talk</app-button>
 
-<app-project-headline
-  position="left"
-  title="Sharkie"
-  [technologies]="['JavaScript', 'HTML', 'CSS']"
->
-</app-project-headline>
-<app-image src="/assets/img/example-person.jpg" alt="Person" [width]="533" [height]="533">
-</app-image>
-<app-image
-  variant="project"
-  arrowPosition="left"
-  src="/assets/img/example-project.png"
-  alt="Screenshot des Sharkie-Projekts"
-  [width]="620"
-  [height]="393"
-/>
+<div class="about__layout">
+  <div class="about__content">
+    <div class="about__description">
+      <app-info-text size="large">
+        Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you
+        passionate about coding? What is your source of inspiration for improving your programming
+        skills? Do you learn from each challenge as you search for the most efficient or elegant
+        solution?
+      </app-info-text>
 
+      <app-info-text size="large">Let's collaborate and build something remarkable together!</app-info-text>
+    </div>
+
+    <div class="about__facts">
+      <app-info-text size="large" iconSrc="/assets/img/icons/ico_house.svg" iconAlt="">
+        Based in Munich
+      </app-info-text>
+
+      <app-info-text size="large" iconSrc="/assets/img/icons/ico_laptop.svg" iconAlt="">
+        Open to work Remote
+      </app-info-text>
+    </div>
+
+    <app-button position="center">Let's talk</app-button>
+  </div>
+
+  <app-image
+    class="about__portrait"
+    src="/assets/img/example-person.jpg"
+    alt="Portrait of Karl"
+    [width]="533"
+    [height]="533"
+  />
+</div>
