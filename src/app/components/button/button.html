@@ -1,0 +1,6 @@
+<button class="button--main" 
+[class.button--main_right]="position === 'right'"
+[class.button--main_center]="position === 'center'"  
+[class.button--main_bg-dark]="variant === 'dark'">
+  <ng-content></ng-content>
+</button>
