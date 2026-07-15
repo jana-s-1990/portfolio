@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-headline',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './headline.html',
   styleUrl: './headline.scss',
 })
-export class Headline {}
+export class Headline {
+  @Input() position = 'center';
+}

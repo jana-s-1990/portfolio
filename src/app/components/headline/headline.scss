@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.headline--main {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .headline--main_left {
+    text-align: left;
+  }
+}
