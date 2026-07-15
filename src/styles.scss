@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @use './styles/utilities';
 @use './styles/typography';
+@use './styles/colors' as *;
 
 body{
     box-sizing: border-box;
     margin:0;
+    background-color: $background;
+}
+
+button{
+    cursor: pointer;
 }

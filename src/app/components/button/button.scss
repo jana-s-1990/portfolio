@@ -1,0 +1,27 @@
+@use '../../../styles/colors' as *;
+
+:host{
+    display: flex;
+    width: 100%;
+}
+
+.button--main {
+    background: unset;
+    border: 4px solid $primary;
+    padding: 20px 60px;
+    font-size: 23px;
+    transition: all 0.25s ease-in-out;
+
+    &:hover{
+        font-weight: 700;
+        padding-inline: 80px;
+    }
+}
+
+.button--main_center{
+    margin-inline: auto;
+}
+
+.button--main_right{
+    margin-left: auto;
+}

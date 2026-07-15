@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class Button {
   @Input() variant = 'default';
-  @Input() dropShadow = false;
+  @Input() position = 'left';
 }
