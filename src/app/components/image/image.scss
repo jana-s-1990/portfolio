@@ -105,6 +105,11 @@
     opacity: 1;
   }
 
+  :host-context(.project-card:hover) .portfolio-image_project::after,
+  :host-context(.project-card:focus-within) .portfolio-image_project::after {
+    opacity: 1;
+  }
+
   // Folgende Effekte gelten weiterhin nur für Projektbilder
   .portfolio-image_project .portfolio-image__img {
     filter: grayscale(1);
@@ -120,7 +125,19 @@
     filter: grayscale(0);
   }
 
+  :host-context(.project-card:hover) .portfolio-image_project .portfolio-image__img,
+  :host-context(.project-card:focus-within) .portfolio-image_project .portfolio-image__img {
+    filter: grayscale(0);
+  }
+
   .portfolio-image_project:hover .portfolio-image__arrow {
+    opacity: 1;
+    --arrow-scale: 1;
+    --arrow-rotation: var(--arrow-active-rotation);
+  }
+
+  :host-context(.project-card:hover) .portfolio-image_project .portfolio-image__arrow,
+  :host-context(.project-card:focus-within) .portfolio-image_project .portfolio-image__arrow {
     opacity: 1;
     --arrow-scale: 1;
     --arrow-rotation: var(--arrow-active-rotation);

@@ -1,0 +1,28 @@
+<article
+  class="project-card"
+  [class.project-card_image-right]="imagePosition === 'right'"
+  tabindex="0"
+>
+  <p class="project-card__number">{{ projectNumber }}</p>
+
+  <div class="project-card__layout">
+    <div class="project-card__media">
+      <app-image
+        variant="project"
+        [arrowPosition]="arrowPosition"
+        [src]="imageSrc"
+        [alt]="imageAlt"
+        [width]="imageWidth"
+        [height]="imageHeight"
+      />
+    </div>
+
+    <div class="project-card__content">
+      <app-project-headline [title]="title" [technologies]="technologies" />
+
+      <app-info-text size="small" [position]="textPosition">{{ description }}</app-info-text>
+
+      <app-button>{{ buttonLabel }}</app-button>
+    </div>
+  </div>
+</article>
