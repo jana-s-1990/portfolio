@@ -1,0 +1,11 @@
+.references__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .references__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

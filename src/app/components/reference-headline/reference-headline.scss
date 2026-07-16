@@ -14,3 +14,12 @@
 .reference-jobtitle{
     font-size: 14px;
 }
+
+.ico-quote {
+  width: 40px;
+  height: 40px;
+  background-color: var(--reference-accent, #000);
+  mask: url('/assets/img/icons/ico_quote.svg') center / contain no-repeat;
+  -webkit-mask: url('/assets/img/icons/ico_quote.svg') center / contain no-repeat;
+  transition: background-color 0.25s ease-in-out;
+}
