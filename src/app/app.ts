@@ -4,11 +4,12 @@ import { Section } from './shared/layouts/section/section';
 import { About } from './features/about/about';
 import { Skills } from './features/skills/skills';
 import { Portfolio } from './features/portfolio/portfolio';
+import { References } from "./features/references/references";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Section, About, Skills, Portfolio],
+  imports: [RouterOutlet, Section, About, Skills, Portfolio, References],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
