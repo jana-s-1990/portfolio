@@ -1,0 +1,19 @@
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 70px;
+  }
+}
