@@ -1,0 +1,147 @@
+@use '../../../styles/colors' as *;
+
+:host {
+  display: block;
+}
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(calc(100% - 48px), 1240px);
+  min-height: 100vh;
+  min-height: 100svh;
+  margin-inline: auto;
+  padding-block: 112px 150px;
+  box-sizing: border-box;
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 1050px;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: clamp(42px, 12vw, 128px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  text-align: center;
+}
+
+.hero__identity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 12px;
+
+  p {
+    flex: 0 0 auto;
+    color: $highlight;
+    font-size: clamp(20px, 5.5vw, 46px);
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+.hero__identity-line {
+  width: 100%;
+  height: 3px;
+  background-color: $primary;
+}
+
+.hero__email,
+.hero__scroll {
+  position: absolute;
+  color: $primary;
+  font-size: 18px;
+  line-height: 1.15;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    color: $highlight;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $highlight;
+    outline-offset: 5px;
+  }
+}
+
+.hero__email {
+  bottom: 48px;
+  left: 8px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  transition: color 0.2s ease;
+}
+
+.hero__scroll {
+  right: 0;
+  bottom: 62px;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.hero__scroll-line {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero__inner {
+    padding-block: 128px 160px;
+  }
+
+  .hero__identity {
+    gap: 36px;
+    margin-top: 24px;
+  }
+
+  .hero__email {
+    bottom: 92px;
+  }
+
+  .hero__scroll {
+    bottom: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .hero__scroll-line {
+    display: block;
+    width: 4px;
+    height: 48px;
+    background-color: currentColor;
+    animation: scroll-hint 1.5s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-line {
+    animation: none;
+  }
+}
+
+@keyframes scroll-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}

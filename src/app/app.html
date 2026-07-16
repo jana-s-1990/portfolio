@@ -1,5 +1,11 @@
-<app-section><app-about></app-about></app-section>
-<app-section><app-skills></app-skills></app-section>
-<app-section><app-portfolio></app-portfolio></app-section>
-<app-section><app-references></app-references></app-section>
+<app-header />
+
+<main>
+  <app-hero />
+  <app-section id="about"><app-about /></app-section>
+  <app-section id="skills"><app-skills /></app-section>
+  <app-section id="portfolio"><app-portfolio /></app-section>
+  <app-section id="references"><app-references /></app-section>
+</main>
+
 <router-outlet />

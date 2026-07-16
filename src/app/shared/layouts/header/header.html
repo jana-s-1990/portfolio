@@ -1,0 +1,41 @@
+<header class="header" (keydown.escape)="closeMenu()">
+  <div class="header__inner">
+    <a class="header__logo" href="#home" aria-label="Back to the top" (click)="closeMenu()">
+      [SE.]
+    </a>
+
+    <div class="header__actions">
+      <div class="header__languages" aria-label="Available languages">
+        <span class="header__language header__language--active">EN</span>
+        <span class="header__language">DE</span>
+      </div>
+
+      <button
+        class="header__menu-button"
+        type="button"
+        aria-controls="primary-navigation"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? 'Close navigation' : 'Open navigation'"
+        [class.header__menu-button--open]="menuOpen()"
+        (click)="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav
+      id="primary-navigation"
+      class="header__nav"
+      aria-label="Primary navigation"
+      [attr.aria-hidden]="!menuOpen()"
+      [class.header__nav--open]="menuOpen()"
+    >
+      <a href="#about" (click)="closeMenu()">About me</a>
+      <a href="#skills" (click)="closeMenu()">My skills</a>
+      <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+      <a href="#references" (click)="closeMenu()">References</a>
+    </nav>
+  </div>
+</header>
