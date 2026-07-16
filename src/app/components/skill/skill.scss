@@ -1,3 +1,5 @@
+@use '../../../styles/colors' as *;
+
 .skill {
     display: flex;
     flex-direction: column;
@@ -7,12 +9,28 @@
 
 .skill-img {
     height: 60px;
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
 
 .skill-name {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.2;
+    text-align: center;
+    transition: color 0.25s ease;
+}
+
+@media (hover: hover) {
+    .skill:hover .skill-name {
+        color: $highlight;
+    }
+
+    .skill:hover .skill-img {
+        filter: drop-shadow(4px 4px 0 $highlight);
+        transform: translateY(-6px) scale(1.08);
+    }
 }
 
 @media (min-width: 768px) {
