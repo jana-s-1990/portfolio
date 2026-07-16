@@ -1,0 +1,30 @@
+@use '../../../styles/colors' as *;
+
+:host{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+header{
+    background-color: $background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 16px;
+}
+
+.burger-icon{
+    display: flex;
+    height: 36px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-icon-line{
+    width: 100%;
+    height: 4px;
+    background-color: $primary;
+}
