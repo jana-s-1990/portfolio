@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './info-text.scss',
 })
 export class InfoText {
-  @Input() position: 'left' | 'right' = 'left';
+  @Input() position: 'left' | 'right' | 'center' = 'left';
   @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() iconSrc: string | null = null;
   @Input() iconAlt = '';

@@ -3,3 +3,18 @@
   margin-inline: auto;
   padding-inline: 16px;
 }
+
+.section-intro {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .section-intro {
+    margin-bottom: 80px;
+  }
+
+  .section-intro_text {
+    margin: 0 auto;
+    width: 600px;
+  }
+}

@@ -45,6 +45,14 @@
     line-height: 1.2;
 }
 
+@media (min-width: 768px) {
+    .info-text_center {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 @media (min-width: 1024px) {
     .info-text_right {
         text-align: left;

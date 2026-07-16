@@ -1,14 +1,21 @@
 @use '../styles/colors' as *;
 
 @font-face {
-  font-family: "Bricolage Grotesque";
-  src: url(/assets/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf);
-  font-weight: 200 800;
+  font-family: "Syne";
+  src: url(/assets/fonts/Syne-VariableFont_wght.ttf);
+  font-weight: 400 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overpass";
+  src: url(/assets/fonts/Overpass-VariableFont_wght.ttf);
+  font-weight: 100 900;
   font-style: normal;
 }
 
 body {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-weight: 400;
 }
 
@@ -17,6 +24,14 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
 }
 
 h1 {
