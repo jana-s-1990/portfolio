@@ -16,6 +16,8 @@ export class ProjectCard {
   @Input() technologies: string[] = [];
   @Input({ required: true }) description = '';
   @Input() textPosition: 'left' | 'right' = 'left';
+  @Input() headlinePosition: 'left' | 'right' = 'left';
+  @Input() buttonPosition: 'left' | 'right' | 'center' = 'left';
 
   @Input({ required: true }) imageSrc = '';
   @Input({ required: true }) imageAlt = '';

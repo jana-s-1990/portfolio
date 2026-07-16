@@ -18,11 +18,11 @@
     </div>
 
     <div class="project-card__content">
-      <app-project-headline [title]="title" [technologies]="technologies" />
+      <app-project-headline [title]="title" [technologies]="technologies" [position]="headlinePosition" />
 
       <app-info-text size="small" [position]="textPosition">{{ description }}</app-info-text>
 
-      <app-button>{{ buttonLabel }}</app-button>
+      <app-button [position]="buttonPosition">{{ buttonLabel }}</app-button>
     </div>
   </div>
 </article>

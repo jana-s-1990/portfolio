@@ -1,6 +1,6 @@
 @use '../../../styles/colors' as *;
 
-:host{
+:host {
     display: flex;
     width: 100%;
 }
@@ -12,16 +12,18 @@
     font-size: 23px;
     transition: all 0.25s ease-in-out;
 
-    &:hover{
+    &:hover {
         font-weight: 700;
         padding-inline: 80px;
     }
 }
 
-.button--main_center{
+.button--main_center {
     margin-inline: auto;
 }
 
-.button--main_right{
-    margin-left: auto;
+@media (max-width: 1023px) {
+    .button--main_right {
+        margin-left: auto;
+    }
 }

@@ -31,4 +31,14 @@
     .technologies {
         font-size: 23px;
     }
+
+    .project-headline_right {
+        h3 {
+            text-align: left;
+        }
+
+        .technologies {
+            justify-content: flex-start;
+        }
+    }
 }

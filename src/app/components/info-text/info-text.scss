@@ -32,7 +32,7 @@
 
 .info-text_small {
     font-size: 16px;
-    line-height: 1.2 ;
+    line-height: 1.2;
 }
 
 .info-text_medium {
@@ -46,10 +46,15 @@
 }
 
 @media (min-width: 1024px) {
+    .info-text_right {
+        text-align: left;
+    }
+
     .info-text__icon {
         width: 40px;
         height: 40px;
     }
+
     .info-text_large {
         font-size: 22px;
     }
