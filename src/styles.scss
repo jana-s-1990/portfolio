@@ -3,12 +3,25 @@
 @use './styles/typography';
 @use './styles/colors' as *;
 
-body{
-    box-sizing: border-box;
-    margin:0;
-    background-color: $background;
+html {
+  scroll-behavior: smooth;
 }
 
-button{
-    cursor: pointer;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $background;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
 }
