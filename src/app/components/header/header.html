@@ -1,6 +1,11 @@
 <header>
   <a href="#" title="Zum Anfang"><img src="assets/img/logo_header.svg" alt="Logo" /></a>
-  <div class="burger-icon">
+  <div
+    class="burger-icon"
+    [class.burger-icon--open]="menuOpen()"
+    [class.burger-icon--closing]="menuAnimated() && !menuOpen()"
+    (click)="toggleMenu()"
+  >
     <span class="burger-icon-line"></span>
     <span class="burger-icon-line"></span>
     <span class="burger-icon-line"></span>

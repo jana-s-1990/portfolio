@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  protected readonly menuOpen = signal(false);
+  protected readonly menuAnimated = signal(false);
+
+  protected toggleMenu(): void {
+    this.menuAnimated.set(true);
+    this.menuOpen.update((isOpen) => !isOpen);
+  }
+}
