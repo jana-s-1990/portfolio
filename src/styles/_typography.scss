@@ -71,7 +71,7 @@ h3 {
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 128px;
+    font-size: 100px;
   }
 
   h2 {
@@ -81,5 +81,11 @@ h3 {
   h3 {
     font-size: 45px;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 128px;
   }
 }

@@ -1,6 +1,51 @@
-.hero-wrapper{
+@use '../../../styles/colors' as *;
+
+.hero-wrapper {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.hero-headline-subheadline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+
+    span {
+        display: inline-block;
+        height: 4px;
+        background-color: $primary;
+        width: 100px;
+        margin-right: 8px;
+    }
+
+    p {
+        color: $highlight;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1;
+    }
+}
+
+.hero__mailto-scroll-down{
+    transform: rotate(-90deg);
+}
+
+@media (min-width: 400px) {
+    .hero-headline-subheadline {
+        p {
+            font-size: 23px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-headline-subheadline {
+        p {
+            font-size: 48px;
+        }
+    }
 }
