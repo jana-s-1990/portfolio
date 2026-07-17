@@ -92,7 +92,44 @@
     right: 16px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 8px;
     font-size: 22px;
+}
+
+.hero__scroll-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__scroll-arrow-window {
+    --scroll-arrow-track-height: 140px;
+
+    width: 53px;
+    height: var(--scroll-arrow-track-height);
+    overflow: hidden;
+}
+
+.hero__scroll-arrow {
+    display: block;
+    width: 100%;
+    height: 95px;
+    animation: scroll-arrow-loop 2.3s linear infinite;
+    will-change: transform;
+}
+
+@keyframes scroll-arrow-loop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(var(--scroll-arrow-track-height));
+    }
+
+    100% {
+        transform: translateY(var(--scroll-arrow-track-height));
+    }
 }
 
 @media (min-width: 400px) {
@@ -115,5 +152,11 @@
     .hero__email a,
     .hero__email a::after {
         transition: none;
+    }
+
+    .hero__scroll-arrow {
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 }
