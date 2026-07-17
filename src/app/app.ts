@@ -6,11 +6,12 @@ import { Skills } from './features/skills/skills';
 import { Portfolio } from './features/portfolio/portfolio';
 import { References } from "./features/references/references";
 import { Header } from './components/header/header';
+import { Hero } from "./features/hero/hero";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Section, About, Skills, Portfolio, References, Header],
+  imports: [RouterOutlet, Section, About, Skills, Portfolio, References, Header, Hero],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
