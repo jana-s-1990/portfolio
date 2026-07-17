@@ -1,37 +1,98 @@
 @use '../../../styles/colors' as *;
 
 .hero-wrapper {
-    height: 100vh;
+    position: relative;
+    height: 100svh;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.hero-wrapper-headline {
+    width: fit-content;
+    max-width: 100%;
+}
+
 .hero-headline-subheadline {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 8px;
+    width: 100%;
     margin-top: 8px;
 
     span {
-        display: inline-block;
+        flex: 1 1 auto;
         height: 4px;
         background-color: $primary;
-        width: 100px;
-        margin-right: 8px;
     }
 
     p {
+        flex: 0 0 auto;
         color: $highlight;
         font-weight: 700;
         font-size: 18px;
         line-height: 1;
+        white-space: nowrap;
     }
 }
 
-.hero__mailto-scroll-down{
-    transform: rotate(-90deg);
+.hero__email,
+.hero__scroll-down {
+    position: absolute;
+    bottom: clamp(30px, 5vh, 60px);
+    color: $primary;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.hero__email {
+    left: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    a {
+        position: relative;
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        transition: color 200ms ease-in-out;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset-inline: 0;
+            inset-block-end: -6px;
+            inline-size: 100%;
+            block-size: 2px;
+            background-color: $highlight;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 250ms ease-in-out;
+        }
+
+        &:hover,
+        &:focus-visible {
+            color: $highlight;
+
+            &::after {
+                transform: scaleY(1);
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid $highlight;
+            outline-offset: 6px;
+        }
+    }
+}
+
+.hero__scroll-down {
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
 }
 
 @media (min-width: 400px) {
@@ -47,5 +108,12 @@
         p {
             font-size: 48px;
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__email a,
+    .hero__email a::after {
+        transition: none;
     }
 }
