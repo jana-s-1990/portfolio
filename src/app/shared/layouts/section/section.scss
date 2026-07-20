@@ -1,0 +1,31 @@
+@use '../../../../styles/colors' as *;
+
+:host {
+  display: block;
+}
+
+.section {
+  position: relative;
+}
+
+.section_dark {
+  --section-slope-height: clamp(24px, 7vw, 88px);
+
+  color: $background;
+  padding-top: calc(var(--section-slope-height) + 8px);
+  isolation: isolate;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: $primary;
+    clip-path: polygon(
+      0 0,
+      100% var(--section-slope-height),
+      100% 100%,
+      0 100%
+    );
+  }
+}

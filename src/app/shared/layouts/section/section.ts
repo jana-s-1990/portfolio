@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './section.scss',
 })
 export class Section {
-  @Input() variant = 'bright';
+  @Input() variant: 'bright' | 'dark' = 'bright';
+  @Input() sectionId = '';
 }

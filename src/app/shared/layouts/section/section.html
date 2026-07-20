@@ -1,5 +1,9 @@
-<section>
-<div class="container">
+<section
+  class="section"
+  [class.section_dark]="variant === 'dark'"
+  [attr.id]="sectionId || null"
+>
+  <div class="container">
     <ng-content></ng-content>
-</div>
+  </div>
 </section>
