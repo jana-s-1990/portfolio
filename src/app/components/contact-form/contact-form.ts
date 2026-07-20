@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Button } from '../button/button';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { email } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-contact-form',

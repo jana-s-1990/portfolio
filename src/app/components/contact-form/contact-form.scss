@@ -1,0 +1,195 @@
+@use '../../../styles/colors' as *;
+
+$error: #ff2f5b;
+
+:host {
+  display: block;
+  width: min(100%, 620px);
+  margin: clamp(40px, 6vw, 72px) auto 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form__field {
+  position: relative;
+  border: 2px solid $background;
+  transition: border-color 0.2s ease-in-out;
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    z-index: 1;
+    padding-inline: 4px;
+    background-color: $primary;
+    font-size: 16px;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    color: $background;
+    font: inherit;
+    font-size: 16px;
+  }
+
+  input {
+    min-height: 48px;
+    padding: 10px 56px 8px 24px;
+  }
+
+  textarea {
+    min-height: clamp(100px, 18vw, 150px);
+    padding: 14px 56px 12px 24px;
+    resize: vertical;
+  }
+
+  &:focus-within {
+    border-color: $highlight;
+  }
+}
+
+.contact-form__field_message {
+  textarea {
+    min-height: clamp(150px, 24vw, 200px);
+  }
+}
+
+.contact-form__status {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+}
+
+.contact-form__field_message .contact-form__status {
+  top: 14px;
+  transform: none;
+}
+
+.contact-form__status_success {
+  background-color: #70e61c;
+
+  &::before {
+    top: 5px;
+    left: 9px;
+    width: 6px;
+    height: 12px;
+    border-right: 3px solid $primary;
+    border-bottom: 3px solid $primary;
+    transform: rotate(45deg);
+  }
+}
+
+.contact-form__status_error {
+  background-color: $error;
+
+  &::before {
+    top: 5px;
+    left: 11px;
+    width: 4px;
+    height: 11px;
+    border-radius: 2px;
+    background-color: $primary;
+  }
+
+  &::after {
+    bottom: 5px;
+    left: 11px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $primary;
+  }
+}
+
+.contact-form__error {
+  color: $error;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.contact-form__privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding-inline: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1.3;
+
+  input {
+    appearance: none;
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    margin: 1px 0 0;
+    border: 2px solid $background;
+    border-radius: 1px;
+    background: transparent;
+    cursor: pointer;
+
+    &:checked {
+      border-color: $highlight;
+      background:
+        $highlight
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='m2 6 2.5 2.5L10 3' fill='none' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E")
+        center / 11px no-repeat;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $highlight;
+      outline-offset: 3px;
+    }
+  }
+
+  a {
+    color: $highlight;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
+app-button {
+  margin-top: 22px;
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    gap: 30px;
+  }
+
+  .contact-form__privacy {
+    font-size: 12px;
+  }
+}

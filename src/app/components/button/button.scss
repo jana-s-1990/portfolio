@@ -22,6 +22,11 @@
     margin-inline: auto;
 }
 
+.button--main_bg-dark {
+    color: $background;
+    border-color: $background;
+}
+
 @media (max-width: 1023px) {
     .button--main_right {
         margin-left: auto;
