@@ -73,23 +73,23 @@
     transform 0.35s ease-in-out;
 }
 
-// Pfeil steht links und zeigt nach rechts oben ins Bild.
+// Pfeil steht links und zeigt nach links oben zum Projekttext.
 .portfolio-image__arrow_left {
   left: var(--frame-offset);
 
   --arrow-translate-x: -50%;
   --arrow-start-rotation: -45deg;
-  --arrow-active-rotation: 0deg;
+  --arrow-active-rotation: -90deg;
   --arrow-rotation: var(--arrow-active-rotation);
 }
 
-// Pfeil steht rechts und zeigt nach links oben ins Bild.
+// Pfeil steht rechts und zeigt nach rechts oben zum Projekttext.
 .portfolio-image__arrow_right {
   right: calc(-1 * var(--frame-offset));
 
   --arrow-translate-x: 50%;
   --arrow-start-rotation: -45deg;
-  --arrow-active-rotation: -90deg;
+  --arrow-active-rotation: 0deg;
   --arrow-rotation: var(--arrow-active-rotation);
 }
 
