@@ -1,0 +1,12 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name" />
+  <input type="email" formControlName="email" />
+  <textarea formControlName="message"></textarea>
+
+  <input
+    type="checkbox"
+    formControlName="privacyAccepted"
+  />
+
+  <button type="submit">Say hello</button>
+</form>
