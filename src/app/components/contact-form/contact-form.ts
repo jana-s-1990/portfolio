@@ -45,5 +45,12 @@ export class ContactForm {
     }
     const formData = this.contactForm.getRawValue();
     console.log(formData);
+
+    this.contactForm.reset({
+      name: '',
+      email: '',
+      message: '',
+      privacyAccepted: false,
+    });
   }
 }

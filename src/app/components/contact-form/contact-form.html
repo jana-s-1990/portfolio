@@ -5,6 +5,7 @@
       <input
         id="contact-name"
         type="text"
+        placeholder=" "
         formControlName="name"
         autocomplete="name"
         [attr.aria-describedby]="contactForm.controls.name.invalid ? 'contact-name-error' : null"
@@ -45,6 +46,7 @@
       <input
         id="contact-email"
         type="email"
+        placeholder=" "
         formControlName="email"
         autocomplete="email"
         [attr.aria-describedby]="contactForm.controls.email.invalid ? 'contact-email-error' : null"
@@ -86,6 +88,7 @@
       <label for="contact-message">Your message</label>
       <textarea
         id="contact-message"
+        placeholder=" "
         formControlName="message"
         [attr.aria-describedby]="
           contactForm.controls.message.invalid ? 'contact-message-error' : null

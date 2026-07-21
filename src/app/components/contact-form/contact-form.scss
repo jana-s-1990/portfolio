@@ -20,19 +20,26 @@
 
 .contact-form__field {
   position: relative;
-  border: 2px solid $background;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-bottom-color: $background;
   transition: border-color 0.2s ease-in-out;
 
   label {
     position: absolute;
-    top: 0;
-    left: 12px;
+    top: 50%;
+    left: 20px;
     z-index: 1;
     padding-inline: 4px;
-    background-color: $primary;
+    background-color: transparent;
     font-size: 16px;
     line-height: 1;
     transform: translateY(-50%);
+    pointer-events: none;
+    transition:
+      top 0.2s ease-in-out,
+      left 0.2s ease-in-out,
+      background-color 0.2s ease-in-out;
   }
 
   input,
@@ -59,14 +66,36 @@
     resize: vertical;
   }
 
+  &:hover,
   &:focus-within {
-    border-color: $highlight;
+    border-color: $background;
+  }
+
+  &:focus-within,
+  &:has(input:not(:placeholder-shown)),
+  &:has(textarea:not(:placeholder-shown)) {
+    label {
+      top: 0;
+      left: 12px;
+      background-color: $primary;
+    }
   }
 }
 
 .contact-form__field_message {
+  label {
+    top: 24px;
+  }
+
   textarea {
     min-height: clamp(150px, 24vw, 200px);
+  }
+
+  &:focus-within,
+  &:has(textarea:not(:placeholder-shown)) {
+    label {
+      top: 0;
+    }
   }
 }
 
