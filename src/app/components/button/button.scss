@@ -16,6 +16,16 @@
         font-weight: 700;
         padding-inline: 80px;
     }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+    }
+
+    &:disabled:hover {
+        font-weight: inherit;
+        padding-inline: 60px;
+    }
 }
 
 .button--main_center {

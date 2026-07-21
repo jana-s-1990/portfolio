@@ -29,6 +29,15 @@ export class ContactForm {
     }),
   });
 
+  get showPrivacyError(): boolean {
+    const controls = this.contactForm.controls;
+    const otherFieldsAreValid =
+      controls.name.valid && controls.email.valid && controls.message.valid;
+
+    return controls.privacyAccepted.invalid &&
+      (controls.privacyAccepted.touched || otherFieldsAreValid);
+  }
+
   onSubmit(): void {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();

@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class Headline {
   @Input() position = 'center';
+  @Input() contact: boolean = false;
 }

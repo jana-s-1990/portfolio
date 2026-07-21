@@ -1,4 +1,8 @@
-<button class="button--main" 
+<button
+  class="button--main"
+  [type]="type"
+  [disabled]="disabled"
+  [class.button--main_disabled]="disabled"
 [class.button--main_right]="position === 'right'"
 [class.button--main_center]="position === 'center'"  
 [class.button--main_bg-dark]="variant === 'dark'">

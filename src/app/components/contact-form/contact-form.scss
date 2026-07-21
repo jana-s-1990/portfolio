@@ -1,7 +1,5 @@
 @use '../../../styles/colors' as *;
 
-$error: #ff2f5b;
-
 :host {
   display: block;
   width: min(100%, 620px);
@@ -130,9 +128,20 @@ $error: #ff2f5b;
 }
 
 .contact-form__error {
+  min-height: 1.2em;
+  margin: 0;
   color: $error;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+  font-weight: 400;
+}
+
+.contact-form__error_visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .contact-form__privacy {
