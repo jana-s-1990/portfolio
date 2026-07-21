@@ -11,4 +11,5 @@ export class InfoText {
   @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() iconSrc: string | null = null;
   @Input() iconAlt = '';
+  @Input() contact:boolean = false;
 }
