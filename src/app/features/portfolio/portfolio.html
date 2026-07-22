@@ -1,9 +1,7 @@
 <div class="section-intro">
-  <app-headline>Portfolio</app-headline>
+  <app-headline>{{ 'portfolio.headline' | transloco }}</app-headline>
   <div class="section-intro_text">
-    <app-info-text size="large" position="center"
-      >Explore a selection of my work here - Interact with projects to see my skills in
-      action.</app-info-text>
+    <app-info-text size="large" position="center">{{ 'portfolio.intro' | transloco }}</app-info-text>
   </div>
 </div>
 <div class="portfolio__projects">
@@ -11,45 +9,45 @@
     projectNumber="01/04"
     title="Join"
     [technologies]="['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase']"
-    description="Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    [description]="'portfolio.projects.join.description' | transloco"
     headlinePosition="right"
     textPosition="right"
     imageSrc="/assets/img/projects/join-project.jpg"
-    imageAlt="Placeholder screenshot for the Join project"
+    [imageAlt]="'portfolio.projects.join.imageAlt' | transloco"
     imagePosition="left"
     [imageWidth]="620"
     [imageHeight]="393"
     buttonPosition="right"
-    buttonLabel="Github"
+    [buttonLabel]="'portfolio.github' | transloco"
   />
 
   <app-project-card
     projectNumber="02/04"
     title="Sharkie"
     [technologies]="['JavaScript', 'HTML', 'CSS']"
-    description="A simple Jump-and-Run game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against the killer whale."
+    [description]="'portfolio.projects.sharkie.description' | transloco"
     textPosition="left"
     imageSrc="/assets/img/projects/sharkie-project.png"
-    imageAlt="Screenshot of the Sharkie game"
+    [imageAlt]="'portfolio.projects.sharkie.imageAlt' | transloco"
     imagePosition="right"
     [imageWidth]="620"
     [imageHeight]="393"
-    buttonLabel="Github"
+    [buttonLabel]="'portfolio.github' | transloco"
   />
 
   <app-project-card
     projectNumber="03/04"
     title="Join"
     [technologies]="['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase']"
-    description="Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    [description]="'portfolio.projects.pokedex.description' | transloco"
     headlinePosition="right"
     textPosition="right"
     imageSrc="/assets/img/projects/pokedex-project.jpg"
-    imageAlt="Placeholder screenshot for the Join project"
+    [imageAlt]="'portfolio.projects.pokedex.imageAlt' | transloco"
     imagePosition="left"
     [imageWidth]="620"
     [imageHeight]="393"
     buttonPosition="right"
-    buttonLabel="Github"
+    [buttonLabel]="'portfolio.github' | transloco"
   />
 </div>

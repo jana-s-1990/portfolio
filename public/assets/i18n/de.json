@@ -1,0 +1,104 @@
+{
+  "language": {
+    "select": "Sprache auswählen",
+    "english": "Zu Englisch wechseln",
+    "german": "Zu Deutsch wechseln"
+  },
+  "header": {
+    "home": "Zum Seitenanfang",
+    "logoAlt": "Logo von Jana Schaaf",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "nav": {
+    "label": "Hauptnavigation",
+    "about": "Über mich",
+    "skills": "Meine Skills",
+    "portfolio": "Portfolio",
+    "sayHi": "Sag Hallo!"
+  },
+  "hero": {
+    "titleFirst": "Frontend",
+    "titleSecond": "Entwicklerin",
+    "emailTitle": "E-Mail schreiben",
+    "scrollLabel": "Nach unten scrollen",
+    "scrollFirst": "Nach unten",
+    "scrollSecond": "scrollen"
+  },
+  "about": {
+    "headline": "Über mich",
+    "description": "Hallo, ich bin Karl. Ergänze hier Informationen über dich und deinen Bezug zur IT. Warum begeistert dich das Programmieren? Was inspiriert dich, deine Fähigkeiten weiterzuentwickeln? Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst?",
+    "collaboration": "Lass uns zusammenarbeiten und etwas Besonderes erschaffen!",
+    "location": "Wohnhaft in München",
+    "remote": "Offen für Remote-Arbeit",
+    "button": "Lass uns reden",
+    "portraitAlt": "Porträt von Karl"
+  },
+  "skills": {
+    "headline": "Meine Skills",
+    "missing": "Der passende Skill ist nicht dabei?",
+    "contact": "Kontaktiere mich",
+    "learning": "Ich bin immer bereit, Neues zu lernen!"
+  },
+  "portfolio": {
+    "headline": "Portfolio",
+    "intro": "Entdecke eine Auswahl meiner Projekte und erfahre mehr über meine Fähigkeiten.",
+    "github": "Github",
+    "projects": {
+      "join": {
+        "description": "Ein vom Kanban-System inspirierter Task-Manager. Aufgaben lassen sich per Drag-and-drop erstellen und organisieren sowie Benutzern und Kategorien zuordnen.",
+        "imageAlt": "Screenshot des Join-Projekts"
+      },
+      "sharkie": {
+        "description": "Ein einfaches Jump-and-Run-Spiel auf Basis eines objektorientierten Ansatzes. Hilf Sharkie, Münzen und Giftflaschen zu finden und gegen den Killerwal zu kämpfen.",
+        "imageAlt": "Screenshot des Sharkie-Spiels"
+      },
+      "pokedex": {
+        "description": "Eine Pokédex-Anwendung zum Entdecken von Pokémon und zum Anzeigen ihrer wichtigsten Eigenschaften.",
+        "imageAlt": "Screenshot des Pokédex-Projekts"
+      }
+    }
+  },
+  "references": {
+    "headline": "Referenzen",
+    "intro": "Ich arbeite sowohl selbstständig als auch gerne im Team. Das sagen Kolleginnen und Kollegen über die Zusammenarbeit mit mir.",
+    "teamPartner": "Teampartner",
+    "frontendEngineer": "Frontend-Entwickler",
+    "cards": {
+      "first": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne seinen Einsatz wären wir nicht so weit gekommen.",
+      "second": "Michi war ein hervorragender Teamkollege. Sein Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreicht haben.",
+      "third": "Die Zusammenarbeit mit Michael war eine große Freude. Er motiviert Teammitglieder dazu, ihr Bestes zu zeigen, und bringt stets wertvolle Ideen ein. Für die Anliegen anderer hatte er immer ein offenes Ohr und unterstützte sie mit viel Humor."
+    }
+  },
+  "contact": {
+    "sectionHeadline": "Sag Hallo!",
+    "headline": "Möchtest du ein neues Projekt besprechen?",
+    "intro": "Schreib mir! Lass uns deine Ideen besprechen und gemeinsam umsetzen.",
+    "backToTop": "Zum Seitenanfang",
+    "form": {
+      "name": "Dein Name",
+      "email": "Deine E-Mail-Adresse",
+      "message": "Deine Nachricht",
+      "valid": "Gültige Eingabe",
+      "nameRequired": "Bitte gib deinen Namen ein",
+      "nameMinLength": "Dein Name muss mindestens 2 Zeichen enthalten",
+      "emailRequired": "Bitte gib deine E-Mail-Adresse ein",
+      "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "messageRequired": "Deine Nachricht ist leer",
+      "messageMinLength": "Deine Nachricht muss mindestens 10 Zeichen enthalten",
+      "privacyPrefix": "Ich habe die",
+      "privacyLink": "Datenschutzerklärung",
+      "privacySuffix": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+      "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung",
+      "submit": "Nachricht senden"
+    }
+  },
+  "footer": {
+    "socialLabel": "Soziale Medien",
+    "githubLabel": "GitHub-Profil von Jana Schaaf öffnen",
+    "emailLabel": "E-Mail an Jana Schaaf schreiben",
+    "logoAlt": "Logo von Jana Schaaf",
+    "copyright": "© Jana Schaaf 2026",
+    "legal": "Impressum"
+  }
+}

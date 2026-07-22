@@ -1,37 +1,32 @@
-<app-headline position="left">About me</app-headline>
+<app-headline position="left">{{ 'about.headline' | transloco }}</app-headline>
 
 <div class="about__layout">
   <div class="about__content">
     <div class="about__description">
       <app-info-text size="large">
-        Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you
-        passionate about coding? What is your source of inspiration for improving your programming
-        skills? Do you learn from each challenge as you search for the most efficient or elegant
-        solution?
+        {{ 'about.description' | transloco }}
       </app-info-text>
 
-      <app-info-text size="large"
-        >Let's collaborate and build something remarkable together!</app-info-text
-      >
+      <app-info-text size="large">{{ 'about.collaboration' | transloco }}</app-info-text>
     </div>
 
     <div class="about__facts">
       <app-info-text size="large" iconSrc="/assets/img/icons/ico_house.svg" iconAlt="">
-        Based in Munich
+        {{ 'about.location' | transloco }}
       </app-info-text>
 
       <app-info-text size="large" iconSrc="/assets/img/icons/ico_laptop.svg" iconAlt="">
-        Open to work Remote
+        {{ 'about.remote' | transloco }}
       </app-info-text>
     </div>
 
-    <app-button position="center">Let's talk</app-button>
+    <app-button position="center">{{ 'about.button' | transloco }}</app-button>
   </div>
 
   <app-image
     class="about__portrait"
     src="/assets/img/example-person.jpg"
-    alt="Portrait of Karl"
+    [alt]="'about.portraitAlt' | transloco"
     [width]="533"
     [height]="533"
   />

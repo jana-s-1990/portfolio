@@ -1,8 +1,13 @@
 <div class="site-header" [class.site-header_menu-open]="menuOpen()">
   <div class="container">
     <header class="site-header__layout">
-      <a class="site-header__logo" href="#top" title="Zum Anfang" (click)="closeMenu()">
-        <img src="assets/img/logo_header.svg" alt="Logo" />
+      <a
+        class="site-header__logo"
+        href="#top"
+        [title]="'header.home' | transloco"
+        (click)="closeMenu()"
+      >
+        <img src="assets/img/logo_header.svg" [alt]="'header.logoAlt' | transloco" />
       </a>
 
       <div class="site-header__actions">
@@ -13,7 +18,7 @@
           type="button"
           aria-controls="main-menu"
           [attr.aria-expanded]="menuOpen()"
-          [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+          [attr.aria-label]="(menuOpen() ? 'header.closeMenu' : 'header.openMenu') | transloco"
           [class.burger-icon--open]="menuOpen()"
           [class.burger-icon--closing]="menuAnimated() && !menuOpen()"
           (click)="toggleMenu()"

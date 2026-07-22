@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Button } from '../button/button';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [Button, ReactiveFormsModule],
+  imports: [Button, ReactiveFormsModule, TranslocoPipe],
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.scss',
 })

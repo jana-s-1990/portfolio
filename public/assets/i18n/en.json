@@ -1,0 +1,104 @@
+{
+  "language": {
+    "select": "Select language",
+    "english": "Switch to English",
+    "german": "Switch to German"
+  },
+  "header": {
+    "home": "Back to top",
+    "logoAlt": "Jana Schaaf logo",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "about": "About me",
+    "skills": "My skills",
+    "portfolio": "Portfolio",
+    "sayHi": "Say hi!"
+  },
+  "hero": {
+    "titleFirst": "Frontend",
+    "titleSecond": "Developer",
+    "emailTitle": "Write an email",
+    "scrollLabel": "Scroll down",
+    "scrollFirst": "Scroll",
+    "scrollSecond": "Down"
+  },
+  "about": {
+    "headline": "About me",
+    "description": "Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution?",
+    "collaboration": "Let's collaborate and build something remarkable together!",
+    "location": "Based in Munich",
+    "remote": "Open to work Remote",
+    "button": "Let's talk",
+    "portraitAlt": "Portrait of Karl"
+  },
+  "skills": {
+    "headline": "My skills",
+    "missing": "Don't see the skill you need?",
+    "contact": "Contact me",
+    "learning": "I'm always ready to learn!"
+  },
+  "portfolio": {
+    "headline": "Portfolio",
+    "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "github": "Github",
+    "projects": {
+      "join": {
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "imageAlt": "Screenshot of the Join project"
+      },
+      "sharkie": {
+        "description": "A simple Jump-and-Run game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against the killer whale.",
+        "imageAlt": "Screenshot of the Sharkie game"
+      },
+      "pokedex": {
+        "description": "A Pokédex application for discovering Pokémon and viewing their most important attributes.",
+        "imageAlt": "Screenshot of the Pokédex project"
+      }
+    }
+  },
+  "references": {
+    "headline": "References",
+    "intro": "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.",
+    "teamPartner": "Team Partner",
+    "frontendEngineer": "Frontend Engineer",
+    "cards": {
+      "first": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+      "second": "Michi was a top team colleague. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
+      "third": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+    }
+  },
+  "contact": {
+    "sectionHeadline": "Say Hi!",
+    "headline": "Want to discuss a new project?",
+    "intro": "Say hello! Let's discuss your ideas and make it happen.",
+    "backToTop": "Back to top",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "valid": "Valid input",
+      "nameRequired": "Your name is required",
+      "nameMinLength": "Your name must contain at least 2 characters",
+      "emailRequired": "Your email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Your message is empty",
+      "messageMinLength": "Your message must contain at least 10 characters",
+      "privacyPrefix": "I've read the",
+      "privacyLink": "privacy policy",
+      "privacySuffix": "and agree to the processing of my data as outlined.",
+      "privacyRequired": "Please accept the privacy policy",
+      "submit": "Send message"
+    }
+  },
+  "footer": {
+    "socialLabel": "Social Media",
+    "githubLabel": "Open Jana Schaaf's GitHub profile",
+    "emailLabel": "Write an email to Jana Schaaf",
+    "logoAlt": "Jana Schaaf logo",
+    "copyright": "© Jana Schaaf 2026",
+    "legal": "Legal notice"
+  }
+}

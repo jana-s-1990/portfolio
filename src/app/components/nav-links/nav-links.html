@@ -1,7 +1,9 @@
-<nav aria-label="Main navigation">
+<nav [attr.aria-label]="'nav.label' | transloco">
   <ul>
-    <li><a href="#about" (click)="linkSelected.emit()">About me</a></li>
-    <li><a href="#skills" (click)="linkSelected.emit()">My skills</a></li>
-    <li><a href="#portfolio" (click)="linkSelected.emit()">Portfolio</a></li>
+    <li><a href="#about" (click)="linkSelected.emit()">{{ 'nav.about' | transloco }}</a></li>
+    <li><a href="#skills" (click)="linkSelected.emit()">{{ 'nav.skills' | transloco }}</a></li>
+    <li>
+      <a href="#portfolio" (click)="linkSelected.emit()">{{ 'nav.portfolio' | transloco }}</a>
+    </li>
   </ul>
 </nav>

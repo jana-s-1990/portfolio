@@ -1,8 +1,8 @@
 <div class="hero-wrapper">
   <div class="hero-wrapper-headline">
     <h1>
-      Frontend<br />
-      Developer
+      {{ 'hero.titleFirst' | transloco }}<br />
+      {{ 'hero.titleSecond' | transloco }}
     </h1>
     <div class="hero-headline-subheadline">
       <span></span>
@@ -11,10 +11,12 @@
   </div>
 
   <div class="hero__email">
-    <a href="mailto:janaschaaf@icloud.com" title="E-Mail schreiben">janaschaaf@icloud.com</a>
+    <a href="mailto:janaschaaf@icloud.com" [title]="'hero.emailTitle' | transloco"
+      >janaschaaf&#64;icloud.com</a
+    >
   </div>
 
-  <div class="hero__scroll-down" aria-label="Nach unten scrollen">
+  <div class="hero__scroll-down" [attr.aria-label]="'hero.scrollLabel' | transloco">
     <div class="hero__scroll-arrow-window" aria-hidden="true">
       <img
         class="hero__scroll-arrow"
@@ -23,8 +25,8 @@
       />
     </div>
     <div class="hero__scroll-label">
-      <span>Scroll</span>
-      <span>Down</span>
+      <span>{{ 'hero.scrollFirst' | transloco }}</span>
+      <span>{{ 'hero.scrollSecond' | transloco }}</span>
     </div>
   </div>
 </div>

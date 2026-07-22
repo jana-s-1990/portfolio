@@ -1,15 +1,20 @@
 <div class="contact">
-  <app-headline position="left" [contact]=true>Say Hi!</app-headline>
+  <app-headline position="left" [contact]="true">{{ 'contact.sectionHeadline' | transloco }}</app-headline>
 
   <div class="contact__intro">
-    <h3 class="contact-headline">Want to discuss a new project?</h3>
-    <app-info-text size="large" position="center" [contact]=true>Say hello! Let's discuss your ideas and make it happen.</app-info-text
-    >
+    <h3 class="contact-headline">{{ 'contact.headline' | transloco }}</h3>
+    <app-info-text size="large" position="center" [contact]="true">
+      {{ 'contact.intro' | transloco }}
+    </app-info-text>
   </div>
 
   <app-contact-form />
 
-  <a class="contact__back-to-top" href="#top" aria-label="Back to top">
+  <a
+    class="contact__back-to-top"
+    href="#top"
+    [attr.aria-label]="'contact.backToTop' | transloco"
+  >
     <svg
       class="contact__back-to-top-arrow"
       width="54"

@@ -1,29 +1,32 @@
 <footer class="footer">
   <div class="container footer__layout">
-    <nav class="footer__socials" aria-label="Social Media">
+    <nav class="footer__socials" [attr.aria-label]="'footer.socialLabel' | transloco">
       <a
         href="https://github.com/jana-s-1990"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="GitHub-Profil von Jana Schaaf öffnen"
+        [attr.aria-label]="'footer.githubLabel' | transloco"
       >
         <img src="assets/img/icons/ico_github.svg" alt="" />
       </a>
 
-      <a href="mailto:janaschaaf@icloud.com" aria-label="E-Mail an Jana Schaaf schreiben">
+      <a
+        href="mailto:janaschaaf@icloud.com"
+        [attr.aria-label]="'footer.emailLabel' | transloco"
+      >
         <img src="assets/img/icons/ico_mail.svg" alt="" />
       </a>
     </nav>
 
     <div class="footer__branding">
-      <img src="assets/img/footer_logo.svg" alt="Logo von Jana Schaaf" />
-      <p>© Jana Schaaf 2026</p>
+      <img src="assets/img/footer_logo.svg" [alt]="'footer.logoAlt' | transloco" />
+      <p>{{ 'footer.copyright' | transloco }}</p>
     </div>
 
     <a class="footer__email" href="mailto:janaschaaf@icloud.com">
       janaschaaf&#64;icloud.com
     </a>
 
-    <a class="footer__legal" routerLink="/legal-notice">Legal notice</a>
+    <a class="footer__legal" routerLink="/legal-notice">{{ 'footer.legal' | transloco }}</a>
   </div>
 </footer>

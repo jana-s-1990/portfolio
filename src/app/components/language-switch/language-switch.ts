@@ -1,19 +1,30 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
+import { SupportedLanguage, persistLanguage } from '../../core/i18n/language';
 
 @Component({
   selector: 'app-language-switch',
-  imports: [],
+  imports: [TranslocoPipe],
   templateUrl: './language-switch.html',
   styleUrl: './language-switch.scss',
 })
 export class LanguageSwitch {
-  protected readonly activeLanguage = signal<'en' | 'de'>('en');
-
   private readonly document = inject(DOCUMENT);
+  private readonly translocoService = inject(TranslocoService);
 
-  protected selectLanguage(language: 'en' | 'de'): void {
-    this.activeLanguage.set(language);
+  protected readonly activeLanguage = toSignal(this.translocoService.langChanges$, {
+    initialValue: this.translocoService.getActiveLang() as SupportedLanguage,
+  });
+
+  constructor() {
+    this.document.documentElement.lang = this.activeLanguage();
+  }
+
+  protected selectLanguage(language: SupportedLanguage): void {
+    this.translocoService.setActiveLang(language);
+    persistLanguage(language);
     this.document.documentElement.lang = language;
   }
 }

@@ -1,8 +1,9 @@
-<div class="language-switch" aria-label="Select language">
+<div class="language-switch" [attr.aria-label]="'language.select' | transloco">
   <button
     type="button"
     [class.language-switch__button_active]="activeLanguage() === 'en'"
     [attr.aria-pressed]="activeLanguage() === 'en'"
+    [attr.aria-label]="'language.english' | transloco"
     (click)="selectLanguage('en')"
   >
     EN
@@ -11,6 +12,7 @@
     type="button"
     [class.language-switch__button_active]="activeLanguage() === 'de'"
     [attr.aria-pressed]="activeLanguage() === 'de'"
+    [attr.aria-label]="'language.german' | transloco"
     (click)="selectLanguage('de')"
   >
     DE

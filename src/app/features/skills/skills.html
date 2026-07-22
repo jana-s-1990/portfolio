@@ -1,5 +1,5 @@
 <div class="skills-frame">
-  <app-headline class="skills-title">My skills</app-headline>
+  <app-headline class="skills-title">{{ 'skills.headline' | transloco }}</app-headline>
 
   <div class="skills-wrapper">
     <app-skill
@@ -64,9 +64,9 @@
     />
 
     <div class="skills-learning__text">
-      <span>Don't see the skill you need?</span>
-      <a href="#contact">Contact me</a>
-      <span>I'm always ready to learn!</span>
+      <span>{{ 'skills.missing' | transloco }}</span>
+      <a href="#contact">{{ 'skills.contact' | transloco }}</a>
+      <span>{{ 'skills.learning' | transloco }}</span>
     </div>
   </div>
 </div>
