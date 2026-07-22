@@ -79,8 +79,8 @@
 
   img {
     display: block;
-    width: 67px;
-    height: 30px;
+    width: clamp(90px, calc(82px + 2vw), 110px);
+    height: auto;
   }
 
   p {

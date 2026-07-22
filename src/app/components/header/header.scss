@@ -23,11 +23,15 @@
   padding-block: 24px;
 }
 
-.site-header__logo,
+.site-header__logo {
+  display: block;
+  width: clamp(90px, calc(82px + 2vw), 110px);
+}
+
 .site-header__logo img {
   display: block;
-  width: 67px;
-  height: 30px;
+  width: 100%;
+  height: auto;
 }
 
 .site-header__logo:focus-visible {

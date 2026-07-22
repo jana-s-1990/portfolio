@@ -36,13 +36,12 @@ h4 {
 
 h1 {
   text-align: center;
-  font-size: 64px;
-  font-size: 34px;
+  font-size: clamp(27px, calc(11.5vw - 9.8px), 128px);
   line-height: 1;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: clamp(28px, calc(6.82vw + 6.18px), 76px);
   font-weight: 800;
   transition: color 0.25s ease-in-out;
 
@@ -52,40 +51,13 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
+  font-size: clamp(26px, calc(2.7vw + 17.36px), 45px);
   font-weight: 800;
   line-height: 1.2;
 }
 
-@media (min-width: 400px) {
-  h1 {
-    font-size: 45px;
-  }
-}
-
-@media (min-width: 768px) {
-  h1 { 
-    font-size: 80px;
-  }
-}
-
 @media (min-width: 1024px) {
-  h1 {
-    font-size: 100px;
-  }
-
-  h2 {
-    font-size: 76px;
-  }
-
   h3 {
-    font-size: 45px;
     line-height: 1;
-  }
-}
-
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 128px;
   }
 }
