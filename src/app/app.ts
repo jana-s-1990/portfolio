@@ -9,11 +9,24 @@ import { Header } from './components/header/header';
 import { Hero } from "./features/hero/hero";
 import { Footer } from './components/footer/footer';
 import { Contact } from './features/contact/contact';
+import { ScrollArrow } from './components/scroll-arrow/scroll-arrow';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Section, About, Skills, Portfolio, References, Header, Hero, Footer, Contact],
+  imports: [
+    RouterOutlet,
+    Section,
+    About,
+    Skills,
+    Portfolio,
+    References,
+    Header,
+    Hero,
+    Footer,
+    Contact,
+    ScrollArrow,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

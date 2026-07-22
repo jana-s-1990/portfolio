@@ -1,0 +1,149 @@
+@use '../../../styles/colors' as *;
+
+:host {
+  display: block;
+  height: 250px;
+}
+
+.scroll-arrow {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.scroll-arrow__icon {
+  display: block;
+  width: 250px;
+  height: 250px;
+  overflow: visible;
+}
+
+.scroll-arrow__shaft,
+.scroll-arrow__head {
+  fill: none;
+  stroke: $primary;
+  stroke-width: 4px;
+  vector-effect: non-scaling-stroke;
+}
+
+.scroll-arrow_left {
+  .scroll-arrow__shaft,
+  .scroll-arrow__head {
+    transform-origin: 41.3px 41.3px;
+  }
+
+  &.scroll-arrow_visible {
+    .scroll-arrow__shaft {
+      animation: arrow-shaft-down-right 0.35s ease-in-out forwards;
+    }
+
+    .scroll-arrow__head {
+      animation: arrow-head-down-right 0.35s ease-in-out forwards;
+    }
+  }
+}
+
+.scroll-arrow_right {
+  .scroll-arrow__shaft,
+  .scroll-arrow__head {
+    transform-origin: 265.7px 41.3px;
+  }
+
+  &.scroll-arrow_visible {
+    .scroll-arrow__shaft {
+      animation: arrow-shaft-down-left 0.35s ease-in-out forwards;
+    }
+
+    .scroll-arrow__head {
+      animation: arrow-head-down-left 0.35s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes arrow-shaft-down-right {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(0, 0) scale(1.474);
+  }
+
+  100% {
+    transform: translate(72px, 72px) scale(1);
+  }
+}
+
+@keyframes arrow-head-down-right {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50%,
+  100% {
+    transform: translate(72px, 72px);
+  }
+}
+
+@keyframes arrow-shaft-down-left {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(0, 0) scale(1.474);
+  }
+
+  100% {
+    transform: translate(-72px, 72px) scale(1);
+  }
+}
+
+@keyframes arrow-head-down-left {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50%,
+  100% {
+    transform: translate(-72px, 72px);
+  }
+}
+
+@media (min-width: 768px) {
+  :host {
+    height: 307px;
+  }
+
+  .scroll-arrow {
+    justify-content: flex-start;
+  }
+
+  .scroll-arrow_right {
+    justify-content: flex-end;
+  }
+
+  .scroll-arrow__icon {
+    width: 307px;
+    height: 307px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arrow_left.scroll-arrow_visible {
+    .scroll-arrow__shaft,
+    .scroll-arrow__head {
+      animation: none;
+      transform: translate(72px, 72px);
+    }
+  }
+
+  .scroll-arrow_right.scroll-arrow_visible {
+    .scroll-arrow__shaft,
+    .scroll-arrow__head {
+      animation: none;
+      transform: translate(-72px, 72px);
+    }
+  }
+}

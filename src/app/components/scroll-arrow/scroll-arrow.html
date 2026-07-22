@@ -1,0 +1,19 @@
+<div
+  class="container scroll-arrow"
+  [class.scroll-arrow_left]="side === 'left'"
+  [class.scroll-arrow_right]="side === 'right'"
+  [class.scroll-arrow_visible]="isVisible()"
+  aria-hidden="true"
+>
+  @if (side === 'left') {
+    <svg class="scroll-arrow__icon" viewBox="0 0 307 307" fill="none">
+      <path class="scroll-arrow__shaft" d="M41.3 41.3L193.5 193.5" />
+      <path class="scroll-arrow__head" d="M193.5 110.9V193.5H110.9" />
+    </svg>
+  } @else {
+    <svg class="scroll-arrow__icon" viewBox="0 0 307 307" fill="none">
+      <path class="scroll-arrow__shaft" d="M265.7 41.3L113.5 193.5" />
+      <path class="scroll-arrow__head" d="M113.5 110.9V193.5H196.1" />
+    </svg>
+  }
+</div>
