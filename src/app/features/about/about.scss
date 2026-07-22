@@ -37,6 +37,10 @@ app-headline {
   align-self: start;
 }
 
+app-info-text p:not(:first-child){
+  margin-top: 20px;
+}
+
 @media (min-width: 768px) {
   :host {
     padding-block: 80px;

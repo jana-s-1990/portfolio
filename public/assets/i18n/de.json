@@ -27,12 +27,14 @@
   },
   "about": {
     "headline": "Über mich",
-    "description": "Hallo, ich bin Karl. Ergänze hier Informationen über dich und deinen Bezug zur IT. Warum begeistert dich das Programmieren? Was inspiriert dich, deine Fähigkeiten weiterzuentwickeln? Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst?",
-    "collaboration": "Lass uns zusammenarbeiten und etwas Besonderes erschaffen!",
-    "location": "Wohnhaft in München",
+    "description": "Hallo, ich bin Jana. Ich bin UI/UX-Designerin und Frontend-Entwicklerin mit einer Leidenschaft dafür, komplexe Herausforderungen in intuitive digitale Erlebnisse zu verwandeln. Mich motiviert die Verbindung aus Kreativität und Problemlösung – Lösungen zu entwickeln, die nicht nur gut aussehen, sondern Produkte einfacher und angenehmer in der Nutzung machen.",
+    "description-section-two": "Ich habe mich für Webdesign und Frontend-Entwicklung entschieden, weil Websites und digitale Anwendungen unseren Alltag prägen. Genau dort entstehen die meisten Herausforderungen in der Benutzerführung, und ich liebe es, diese mit durchdachtem Design und einer sauberen technischen Umsetzung zu lösen.",
+    "description-section-third": "Dabei zerlege ich komplexe Aufgaben gern in kleinere Bestandteile, analysiere sie aus verschiedenen Blickwinkeln und entwickle Lösungen, die sowohl gestalterisch als auch technisch überzeugen. Mich begeistert der gesamte Prozess – vom Verstehen eines Problems bis hin zu einer intuitiven und überzeugenden Nutzererfahrung.",
+    "collaboration": "Ich bin neugierig, entwickle mich kontinuierlich weiter und möchte digitale Produkte gestalten, die Menschen den Alltag erleichtern.",
+    "location": "Wohnhaft in Münster, Nordrhein-Westfalen, Deutschland",
     "remote": "Offen für Remote-Arbeit",
     "button": "Lass uns reden",
-    "portraitAlt": "Porträt von Karl"
+    "portraitAlt": "Porträt von Jana"
   },
   "skills": {
     "headline": "Meine Skills",
@@ -65,7 +67,7 @@
     "teamPartner": "Teampartner",
     "frontendEngineer": "Frontend-Entwickler",
     "cards": {
-      "first": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne seinen Einsatz wären wir nicht so weit gekommen.",
+      "first": "Ich hatte das Vergnügen, mit Jana an unserem „Join“-Projekt zusammenzuarbeiten, und sie war ein absolutes Highlight. Selbst nach ihrer Rückkehr aus einem zweiwöchigen Krankheitsurlaub hat sie unglaublich schnell wieder den Anschluss gefunden und dem Team sofort einen Mehrwert gebracht. Jana ist herzlich, bleibt auch unter Druck gelassen und ist äußerst zuverlässig. Ich bedaure nur, dass wir nicht schon früher zusammengearbeitet haben! Ich kann Jana jedem Team wärmstens empfehlen, das auf der Suche nach einer zuverlässigen und anpassungsfähigen Teamkollegin ist.",
       "second": "Michi war ein hervorragender Teamkollege. Sein Engagement und seine Bereitschaft, Verantwortung zu übernehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreicht haben.",
       "third": "Die Zusammenarbeit mit Michael war eine große Freude. Er motiviert Teammitglieder dazu, ihr Bestes zu zeigen, und bringt stets wertvolle Ideen ein. Für die Anliegen anderer hatte er immer ein offenes Ohr und unterstützte sie mit viel Humor."
     }

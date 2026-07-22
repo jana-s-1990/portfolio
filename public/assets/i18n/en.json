@@ -27,12 +27,14 @@
   },
   "about": {
     "headline": "About me",
-    "description": "Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution?",
-    "collaboration": "Let's collaborate and build something remarkable together!",
-    "location": "Based in Munich",
+    "description": "Hi, I'm Jana. I'm a UI/UX Designer and Frontend Developer who loves turning complex challenges into intuitive digital experiences. What motivates me most is combining creativity with problem-solving—finding solutions that not only look great but also make products easier and more enjoyable to use.",
+    "description-section-two": "I chose web design and frontend development because websites and digital applications are part of everyday life. That's where people encounter the most usability challenges, and I enjoy solving them through thoughtful design and clean implementation.",
+    "description-section-third": "My approach is to break complex problems down into smaller pieces, explore different perspectives, and create solutions that work both visually and technically. I enjoy the entire process—from understanding the challenge to crafting an experience that feels simple, intuitive, and engaging.",
+    "collaboration": "I'm always looking for opportunities to learn, improve, and build digital products that make a meaningful difference.",
+    "location": "Based in Münster, North Rhine-Westphalia, Germany",
     "remote": "Open to work Remote",
     "button": "Let's talk",
-    "portraitAlt": "Portrait of Karl"
+    "portraitAlt": "Portrait of Jana"
   },
   "skills": {
     "headline": "My skills",
@@ -65,7 +67,7 @@
     "teamPartner": "Team Partner",
     "frontendEngineer": "Frontend Engineer",
     "cards": {
-      "first": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+      "first": "I had the pleasure of working with Jana on our „Join“-project, and she was a total highlight. Even after returning from a two-week illness, she caught up at incredible speed and brought immediate value to the team. Jana is warm, calm under pressure, and remarkably reliable. My only regret is that we didn’t get to collaborate sooner! I highly recommend Jana to any team looking for a dependable and adaptable teammate.",
       "second": "Michi was a top team colleague. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
       "third": "It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
     }
