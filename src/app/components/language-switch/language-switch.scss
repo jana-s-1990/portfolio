@@ -1,0 +1,25 @@
+@use '../../../styles/colors' as *;
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  box-sizing: border-box;
+  min-width: 40px;
+  height: 31px;
+  padding-inline: 7px;
+  color: $primary;
+  font: 700 16px/1 'Overpass', sans-serif;
+}
+
+.language-switch__button_active {
+  border: 2px solid $highlight;
+}
+
+button:focus-visible {
+  outline: 2px solid $highlight;
+  outline-offset: 3px;
+}

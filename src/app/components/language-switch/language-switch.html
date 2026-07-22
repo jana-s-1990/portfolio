@@ -1,0 +1,18 @@
+<div class="language-switch" aria-label="Select language">
+  <button
+    type="button"
+    [class.language-switch__button_active]="activeLanguage() === 'en'"
+    [attr.aria-pressed]="activeLanguage() === 'en'"
+    (click)="selectLanguage('en')"
+  >
+    EN
+  </button>
+  <button
+    type="button"
+    [class.language-switch__button_active]="activeLanguage() === 'de'"
+    [attr.aria-pressed]="activeLanguage() === 'de'"
+    (click)="selectLanguage('de')"
+  >
+    DE
+  </button>
+</div>

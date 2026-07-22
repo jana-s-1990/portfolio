@@ -1,15 +1,35 @@
-<div class="container">
-  <header>
-    <a href="#" title="Zum Anfang"><img src="assets/img/logo_header.svg" alt="Logo" /></a>
-    <button
-      class="burger-icon"
-      [class.burger-icon--open]="menuOpen()"
-      [class.burger-icon--closing]="menuAnimated() && !menuOpen()"
-      (click)="toggleMenu()"
-    >
-      <span class="burger-icon-line"></span>
-      <span class="burger-icon-line"></span>
-      <span class="burger-icon-line"></span>
-  </button>
-  </header>
+<div class="site-header" [class.site-header_menu-open]="menuOpen()">
+  <div class="container">
+    <header class="site-header__layout">
+      <a class="site-header__logo" href="#top" title="Zum Anfang" (click)="closeMenu()">
+        <img src="assets/img/logo_header.svg" alt="Logo" />
+      </a>
+
+      <div class="site-header__actions">
+        <app-language-switch class="site-header__language" />
+
+        <button
+          class="burger-icon"
+          type="button"
+          aria-controls="main-menu"
+          [attr.aria-expanded]="menuOpen()"
+          [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+          [class.burger-icon--open]="menuOpen()"
+          [class.burger-icon--closing]="menuAnimated() && !menuOpen()"
+          (click)="toggleMenu()"
+        >
+          <span class="burger-icon-line"></span>
+          <span class="burger-icon-line"></span>
+          <span class="burger-icon-line"></span>
+        </button>
+      </div>
+    </header>
+  </div>
 </div>
+
+@if (menuOpen()) {
+  <div id="main-menu" class="menu-overlay">
+    <app-nav-links (linkSelected)="closeMenu()" />
+    <app-nav-footer />
+  </div>
+}

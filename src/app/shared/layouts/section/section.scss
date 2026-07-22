@@ -6,6 +6,7 @@
 
 .section {
   position: relative;
+  scroll-margin-top: 94px;
 }
 
 .section_dark {
@@ -27,5 +28,11 @@
       100% 100%,
       0 100%
     );
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    scroll-margin-top: 86px;
   }
 }

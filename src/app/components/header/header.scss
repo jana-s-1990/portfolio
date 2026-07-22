@@ -1,97 +1,183 @@
 @use '../../../styles/colors' as *;
 
-:host{
-    position: fixed;
-    width: 100%;
-    background-color: $background;
-    z-index: 10;
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: 32px;
+.site-header {
+  position: relative;
+  z-index: 2;
+  background-color: $background;
 }
 
-.burger-icon{
-    display: flex;
-    height: 36px;
-    width: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+.site-header__layout {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 94px;
+  padding-block: 24px;
 }
 
-.burger-icon-line{
-    width: 100%;
-    height: 4px;
-    background-color: $primary;
+.site-header__logo,
+.site-header__logo img {
+  display: block;
+  width: 67px;
+  height: 30px;
+}
+
+.site-header__logo:focus-visible {
+  outline: 2px solid $highlight;
+  outline-offset: 5px;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(22px, 6vw, 54px);
+}
+
+.site-header__language {
+  display: none;
+}
+
+.site-header_menu-open .site-header__language {
+  display: block;
+}
+
+.burger-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 36px;
+  padding: 0;
+
+  &:focus-visible {
+    outline: 2px solid $highlight;
+    outline-offset: 5px;
+  }
+}
+
+.burger-icon-line {
+  width: 100%;
+  height: 4px;
+  background-color: $primary;
 }
 
 .burger-icon--open {
-    .burger-icon-line:first-child {
-        animation: burger-top-open 420ms ease-in-out forwards;
-    }
+  .burger-icon-line:first-child {
+    animation: burger-top-open 0.35s ease-in-out forwards;
+  }
 
-    .burger-icon-line:nth-child(2) {
-        animation: burger-middle-open 420ms ease-in-out forwards;
-    }
+  .burger-icon-line:nth-child(2) {
+    animation: burger-middle-open 0.35s ease-in-out forwards;
+  }
 
-    .burger-icon-line:last-child {
-        animation: burger-bottom-open 420ms ease-in-out forwards;
-    }
+  .burger-icon-line:last-child {
+    animation: burger-bottom-open 0.35s ease-in-out forwards;
+  }
 }
 
 .burger-icon--closing {
-    .burger-icon-line:first-child {
-        animation: burger-top-close 420ms ease-in-out forwards;
-    }
+  .burger-icon-line:first-child {
+    animation: burger-top-close 0.35s ease-in-out forwards;
+  }
 
-    .burger-icon-line:nth-child(2) {
-        animation: burger-middle-close 420ms ease-in-out forwards;
-    }
+  .burger-icon-line:nth-child(2) {
+    animation: burger-middle-close 0.35s ease-in-out forwards;
+  }
 
-    .burger-icon-line:last-child {
-        animation: burger-bottom-close 420ms ease-in-out forwards;
-    }
+  .burger-icon-line:last-child {
+    animation: burger-bottom-close 0.35s ease-in-out forwards;
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 94px;
+  overflow-y: auto;
+  background-color: $background;
+  animation: menu-enter 0.25s ease-out both;
+}
+
+@keyframes menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes burger-top-open {
-    0% { width: 40px; transform: translateY(0) rotate(0); }
-    35% { width: 20px; transform: translateY(0) rotate(0); }
-    58% { width: 20px; transform: translateY(16px) rotate(0); }
-    100% { width: 40px; transform: translateY(16px) rotate(45deg); }
+  0% { width: 40px; transform: translateY(0) rotate(0); }
+  35% { width: 20px; transform: translateY(0) rotate(0); }
+  58% { width: 20px; transform: translateY(16px) rotate(0); }
+  100% { width: 40px; transform: translateY(16px) rotate(45deg); }
 }
 
 @keyframes burger-middle-open {
-    0%, 35% { width: 40px; opacity: 1; }
-    68%, 100% { width: 0; opacity: 0; }
+  0%, 35% { width: 40px; opacity: 1; }
+  68%, 100% { width: 0; opacity: 0; }
 }
 
 @keyframes burger-bottom-open {
-    0% { width: 40px; transform: translateY(0) rotate(0); }
-    35% { width: 20px; transform: translateY(0) rotate(0); }
-    58% { width: 20px; transform: translateY(-16px) rotate(0); }
-    100% { width: 40px; transform: translateY(-16px) rotate(-45deg); }
+  0% { width: 40px; transform: translateY(0) rotate(0); }
+  35% { width: 20px; transform: translateY(0) rotate(0); }
+  58% { width: 20px; transform: translateY(-16px) rotate(0); }
+  100% { width: 40px; transform: translateY(-16px) rotate(-45deg); }
 }
 
 @keyframes burger-top-close {
-    0% { width: 40px; transform: translateY(16px) rotate(45deg); }
-    42% { width: 20px; transform: translateY(16px) rotate(0); }
-    65% { width: 20px; transform: translateY(0) rotate(0); }
-    100% { width: 40px; transform: translateY(0) rotate(0); }
+  0% { width: 40px; transform: translateY(16px) rotate(45deg); }
+  42% { width: 20px; transform: translateY(16px) rotate(0); }
+  65% { width: 20px; transform: translateY(0) rotate(0); }
+  100% { width: 40px; transform: translateY(0) rotate(0); }
 }
 
 @keyframes burger-middle-close {
-    0%, 42% { width: 0; opacity: 0; }
-    75%, 100% { width: 40px; opacity: 1; }
+  0%, 42% { width: 0; opacity: 0; }
+  75%, 100% { width: 40px; opacity: 1; }
 }
 
 @keyframes burger-bottom-close {
-    0% { width: 40px; transform: translateY(-16px) rotate(-45deg); }
-    42% { width: 20px; transform: translateY(-16px) rotate(0); }
-    65% { width: 20px; transform: translateY(0) rotate(0); }
-    100% { width: 40px; transform: translateY(0) rotate(0); }
+  0% { width: 40px; transform: translateY(-16px) rotate(-45deg); }
+  42% { width: 20px; transform: translateY(-16px) rotate(0); }
+  65% { width: 20px; transform: translateY(0) rotate(0); }
+  100% { width: 40px; transform: translateY(0) rotate(0); }
+}
+
+@media (min-width: 768px) {
+  .site-header__language {
+    display: block;
+  }
+
+  .site-header__layout {
+    min-height: 86px;
+    padding-block: 22px;
+  }
+
+  .menu-overlay {
+    padding-top: 86px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-overlay,
+  .burger-icon-line {
+    animation-duration: 0.01ms;
+  }
 }
