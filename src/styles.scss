@@ -3,6 +3,10 @@
 @use './styles/typography';
 @use './styles/colors' as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     box-sizing: border-box;
     margin:0;
@@ -13,4 +17,10 @@ button{
     cursor: pointer;
     border: none;
     background: unset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

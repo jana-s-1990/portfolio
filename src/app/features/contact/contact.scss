@@ -1,16 +1,81 @@
 @use '../../../styles/colors' as *;
 
-.contact-headline{
-    color: $highlight;
-    text-align: center;
-    font-family: 'Overpass', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+.contact {
+  position: relative;
 }
 
-.contact__intro{
-    margin-block: 40px;
+.contact-headline {
+  color: $highlight;
+  text-align: center;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.contact__intro {
+  margin-block: 40px;
+}
+
+.contact__back-to-top {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    padding-bottom: 24px;
+  }
+
+  .contact__back-to-top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 54px;
+    height: 79px;
+
+    &:focus-visible {
+      outline: 2px solid $highlight;
+      outline-offset: 4px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .contact__back-to-top-head {
+        transform: translateY(0);
+      }
+
+      .contact__back-to-top-shaft {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  .contact__back-to-top-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 54px;
+    height: 79px;
+    overflow: visible;
+  }
+
+  .contact__back-to-top-head,
+  .contact__back-to-top-shaft {
+    stroke: $background;
+    stroke-width: 4px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .contact__back-to-top-head {
+    transform: translateY(21.5px);
+  }
+
+  .contact__back-to-top-shaft {
+    transform: scaleY(0.718);
+    transform-origin: 27.15px 78.55px;
+  }
 }
 
