@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+:host(.info-text-host_right) {
+    margin-left: auto;
+}
+
 .info-text {
     display: flex;
     align-items: center;
@@ -61,7 +65,13 @@
 }
 
 @media (min-width: 1024px) {
+    :host(.info-text-host_right) {
+        margin-left: 0;
+    }
+
     .info-text_right {
+        margin-right: auto;
+        margin-left: 0;
         text-align: left;
     }
 

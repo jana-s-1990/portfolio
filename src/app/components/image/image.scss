@@ -93,6 +93,14 @@
   --arrow-rotation: var(--arrow-active-rotation);
 }
 
+@media (max-width: 1023px) {
+  .portfolio-image__arrow_right {
+    // Der 42-px-Pfeil ist breiter als der 16-px-Abstand zum Viewport.
+    // Die Differenz wird nach innen versetzt, damit kein Overflow entsteht.
+    right: calc(-1 * var(--frame-offset) + 5px);
+  }
+}
+
 // Nur Geräte, die wirklich hovern können
 @media (hover: hover) {
   // Rahmen bei allen Bildern zunächst unsichtbar
