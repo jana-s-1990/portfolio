@@ -1,10 +1,32 @@
-<button
-  class="button--main"
-  [type]="type"
-  [disabled]="disabled"
-  [class.button--main_disabled]="disabled"
-[class.button--main_right]="position === 'right'"
-[class.button--main_center]="position === 'center'"  
-[class.button--main_bg-dark]="variant === 'dark'">
+<ng-template #buttonContent>
   <ng-content></ng-content>
-</button>
+</ng-template>
+
+@if (href) {
+  <a
+    class="button--main"
+    [attr.href]="disabled ? null : href"
+    [target]="target"
+    [attr.rel]="rel"
+    [attr.aria-disabled]="disabled ? true : null"
+    [attr.tabindex]="disabled ? -1 : null"
+    [class.button--main_disabled]="disabled"
+    [class.button--main_right]="position === 'right'"
+    [class.button--main_center]="position === 'center'"
+    [class.button--main_bg-dark]="variant === 'dark'"
+  >
+    <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+  </a>
+} @else {
+  <button
+    class="button--main"
+    [type]="type"
+    [disabled]="disabled"
+    [class.button--main_disabled]="disabled"
+    [class.button--main_right]="position === 'right'"
+    [class.button--main_center]="position === 'center'"
+    [class.button--main_bg-dark]="variant === 'dark'"
+  >
+    <ng-container [ngTemplateOutlet]="buttonContent"></ng-container>
+  </button>
+}

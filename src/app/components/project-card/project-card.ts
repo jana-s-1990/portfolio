@@ -26,6 +26,8 @@ export class ProjectCard {
   @Input() imagePosition: 'left' | 'right' = 'left';
 
   @Input() buttonLabel = 'Github';
+  @Input() buttonHref: string | null = null;
+  @Input() buttonTarget: '_self' | '_blank' = '_self';
 
   get arrowPosition(): 'left' | 'right' {
     return this.imagePosition === 'left' ? 'right' : 'left';

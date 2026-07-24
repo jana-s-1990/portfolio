@@ -1,7 +1,9 @@
 <div class="section-intro">
   <app-headline>{{ 'portfolio.headline' | transloco }}</app-headline>
   <div class="section-intro_text">
-    <app-info-text size="large" position="center">{{ 'portfolio.intro' | transloco }}</app-info-text>
+    <app-info-text size="large" position="center">{{
+      'portfolio.intro' | transloco
+    }}</app-info-text>
   </div>
 </div>
 <div class="portfolio__projects">
@@ -19,6 +21,8 @@
     [imageHeight]="393"
     buttonPosition="right"
     [buttonLabel]="'portfolio.github' | transloco"
+    buttonHref="https://github.com/jana-s-1990"
+    buttonTarget="_blank"
   />
 
   <app-project-card
@@ -33,6 +37,8 @@
     [imageWidth]="620"
     [imageHeight]="393"
     [buttonLabel]="'portfolio.github' | transloco"
+    buttonHref="https://github.com/jana-s-1990"
+    buttonTarget="_blank"
   />
 
   <app-project-card
@@ -49,5 +55,7 @@
     [imageHeight]="393"
     buttonPosition="right"
     [buttonLabel]="'portfolio.github' | transloco"
+    buttonHref="https://github.com/jana-s-1990"
+    buttonTarget="_blank"
   />
 </div>
