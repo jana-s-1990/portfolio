@@ -1,1 +1,47 @@
-<p>legal-notice works!</p>
+<article class="legal-notice container">
+  <h1>{{ 'legalNotice.title' | transloco }}</h1>
+
+  <p>{{ 'legalNotice.legalBasis' | transloco }}</p>
+
+  <address class="legal-notice__address">
+    {{ 'legalNotice.name' | transloco }}<br />
+    {{ 'legalNotice.street' | transloco }}<br />
+    {{ 'legalNotice.city' | transloco }}
+  </address>
+
+  <section>
+    <p>
+      <strong>{{ 'legalNotice.representedBy' | transloco }}:</strong>
+    </p>
+    <p>{{ 'legalNotice.name' | transloco }}</p>
+  </section>
+
+  <section>
+    <p>
+      <strong>{{ 'legalNotice.contact.title' | transloco }}:</strong>
+    </p>
+    <p>
+      {{ 'legalNotice.contact.phoneLabel' | transloco }}: <a href="tel:+491718908437">01718908437</a
+      ><br />
+      {{ 'legalNotice.contact.emailLabel' | transloco }}:
+      <a href="mailto:janaschaaf@icloud.com">janaschaaf&#64;icloud.com</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>{{ 'legalNotice.disclaimerTitle' | transloco }}</h2>
+    <h3>{{ 'legalNotice.liabilityForLinks.title' | transloco }}</h3>
+    <p>{{ 'legalNotice.liabilityForLinks.text' | transloco }}</p>
+  </section>
+
+  <p class="legal-notice__credit">
+    {{ 'legalNotice.credit.intro' | transloco }}
+    <a href="https://impressum-generator.de" target="_blank" rel="noopener noreferrer"
+      >Impressum-Generator.de</a
+    >.
+    {{ 'legalNotice.credit.poweredBy' | transloco }}
+    <a href="https://www.kanzlei-hasselbach.de/" target="_blank" rel="noopener noreferrer nofollow"
+      >Franziska Hasselbach, Bonn</a
+    >.
+  </p>
+</article>

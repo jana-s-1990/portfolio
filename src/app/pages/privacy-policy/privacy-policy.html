@@ -1,1 +1,5 @@
-<p>privacy-policy works!</p>
+<article class="privacy-policy container">
+  @for (section of sections; track section) {
+    <section [innerHTML]="section | transloco"></section>
+  }
+</article>
