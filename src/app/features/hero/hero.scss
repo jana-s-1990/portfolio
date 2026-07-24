@@ -1,162 +1,166 @@
 @use '../../../styles/colors' as *;
 
 .hero-wrapper {
-    position: relative;
-    height: 100svh;
-    min-height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  position: relative;
+  height: 100svh;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero-wrapper-headline {
-    width: fit-content;
+  width: fit-content;
     max-width: 100%;
+
+    h1:lang(de) {
+        font-size: clamp(27px, calc(9.5vw - 4px), 116px);
+    }
 }
 
 .hero-headline-subheadline {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 8px;
 
-    span {
-        flex: 1 1 auto;
-        height: 4px;
-        background-color: $primary;
-    }
+  span {
+    flex: 1 1 auto;
+    height: 4px;
+    background-color: $primary;
+  }
 
-    p {
-        flex: 0 0 auto;
-        color: $highlight;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 1;
-        white-space: nowrap;
-    }
+  p {
+    flex: 0 0 auto;
+    color: $highlight;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    white-space: nowrap;
+  }
 }
 
 .hero__email,
 .hero__scroll-down {
-    position: absolute;
-    bottom: clamp(30px, 5vh, 60px);
-    color: $primary;
-    font-size: 18px;
-    line-height: 1;
+  position: absolute;
+  bottom: clamp(30px, 5vh, 60px);
+  color: $primary;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .hero__email {
-    left: 0;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+  left: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 
-    a {
-        position: relative;
-        display: inline-block;
-        color: inherit;
-        text-decoration: none;
-        transition: color 200ms ease-in-out;
+  a {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
 
-        &::after {
-            content: '';
-            position: absolute;
-            inset-inline: 0;
-            inset-block-end: -6px;
-            inline-size: 100%;
-            block-size: 2px;
-            background-color: $highlight;
-            transform: scaleY(0);
-            transform-origin: bottom;
-            transition: transform 250ms ease-in-out;
-        }
-
-        &:hover,
-        &:focus-visible {
-            color: $highlight;
-
-            &::after {
-                transform: scaleY(1);
-            }
-        }
-
-        &:focus-visible {
-            outline: 2px solid $highlight;
-            outline-offset: 6px;
-        }
+    &::after {
+      content: '';
+      position: absolute;
+      inset-inline: 0;
+      inset-block-end: -6px;
+      inline-size: 100%;
+      block-size: 2px;
+      background-color: $highlight;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 250ms ease-in-out;
     }
+
+    &:hover,
+    &:focus-visible {
+      color: $highlight;
+
+      &::after {
+        transform: scaleY(1);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $highlight;
+      outline-offset: 6px;
+    }
+  }
 }
 
 .hero__scroll-down {
-    right: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    font-size: 22px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
 }
 
 .hero__scroll-label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__scroll-arrow-window {
-    --scroll-arrow-track-height: 140px;
+  --scroll-arrow-track-height: 140px;
 
-    width: 53px;
-    height: var(--scroll-arrow-track-height);
-    overflow: hidden;
+  width: 53px;
+  height: var(--scroll-arrow-track-height);
+  overflow: hidden;
 }
 
 .hero__scroll-arrow {
-    display: block;
-    width: 100%;
-    height: 95px;
-    animation: scroll-arrow-loop 2.3s linear infinite;
-    will-change: transform;
+  display: block;
+  width: 100%;
+  height: 95px;
+  animation: scroll-arrow-loop 2.3s linear infinite;
+  will-change: transform;
 }
 
 @keyframes scroll-arrow-loop {
-    0% {
-        transform: translateY(-100%);
-    }
+  0% {
+    transform: translateY(-100%);
+  }
 
-    35% {
-        transform: translateY(var(--scroll-arrow-track-height));
-    }
+  35% {
+    transform: translateY(var(--scroll-arrow-track-height));
+  }
 
-    100% {
-        transform: translateY(var(--scroll-arrow-track-height));
-    }
+  100% {
+    transform: translateY(var(--scroll-arrow-track-height));
+  }
 }
 
 @media (min-width: 400px) {
-    .hero-headline-subheadline {
-        p {
-            font-size: 23px;
-        }
+  .hero-headline-subheadline {
+    p {
+      font-size: 23px;
     }
+  }
 }
 
 @media (min-width: 1024px) {
-    .hero-headline-subheadline {
-        p {
-            font-size: 48px;
-        }
+  .hero-headline-subheadline {
+    p {
+      font-size: 48px;
     }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero__email a,
-    .hero__email a::after {
-        transition: none;
-    }
+  .hero__email a,
+  .hero__email a::after {
+    transition: none;
+  }
 
-    .hero__scroll-arrow {
-        animation: none;
-        opacity: 1;
-        transform: none;
-    }
+  .hero__scroll-arrow {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
