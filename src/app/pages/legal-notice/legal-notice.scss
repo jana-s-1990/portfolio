@@ -1,0 +1,11 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  padding-top: 94px;
+}
+
+@media (min-width: 768px) {
+  :host {
+    padding-top: 86px;
+  }
+}

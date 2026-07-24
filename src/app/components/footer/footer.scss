@@ -5,9 +5,27 @@
 }
 
 .footer {
+  --footer-slope-height: clamp(24px, 7vw, 88px);
+
+  position: relative;
   background-color: $primary;
   color: $background;
   font-family: 'Overpass', sans-serif;
+}
+
+.footer_sloped {
+  margin-top: var(--footer-slope-height);
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: calc(100% - 1px);
+    left: 0;
+    height: calc(var(--footer-slope-height) + 1px);
+    background-color: $primary;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+  }
 }
 
 .footer__layout {

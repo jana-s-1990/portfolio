@@ -1,18 +1,7 @@
 <app-header />
 
 <main id="top">
-  <app-section><app-hero /></app-section>
-  <app-section sectionId="about"><app-about /></app-section>
-  <app-scroll-arrow side="right" />
-  <app-section sectionId="skills"><app-skills /></app-section>
-  <app-scroll-arrow side="left" />
-  <app-section sectionId="portfolio"><app-portfolio /></app-section>
-  <app-section><app-references /></app-section>
-  <app-scroll-arrow side="right" />
-
-  <app-section variant="dark" sectionId="contact"><app-contact /></app-section>
+  <router-outlet />
 </main>
 
-<app-footer />
-
-<router-outlet />
+<app-footer [sloped]="footerSloped()" />

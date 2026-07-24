@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, OnDestroy, Renderer2, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { LanguageSwitch } from '../language-switch/language-switch';
 import { NavFooter } from '../nav-footer/nav-footer';
@@ -7,7 +8,7 @@ import { NavLinks } from '../nav-links/nav-links';
 
 @Component({
   selector: 'app-header',
-  imports: [LanguageSwitch, NavFooter, NavLinks, TranslocoPipe],
+  imports: [LanguageSwitch, NavFooter, NavLinks, RouterLink, TranslocoPipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })

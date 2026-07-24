@@ -1,34 +1,15 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Title } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TranslocoService } from '@jsverse/transloco';
-import { Section } from './shared/layouts/section/section';
-import { About } from './features/about/about';
-import { Skills } from './features/skills/skills';
-import { Portfolio } from './features/portfolio/portfolio';
-import { References } from './features/references/references';
 import { Header } from './components/header/header';
-import { Hero } from './features/hero/hero';
 import { Footer } from './components/footer/footer';
-import { Contact } from './features/contact/contact';
-import { ScrollArrow } from './components/scroll-arrow/scroll-arrow';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    Section,
-    About,
-    Skills,
-    Portfolio,
-    References,
-    Header,
-    Hero,
-    Footer,
-    Contact,
-    ScrollArrow,
-  ],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -36,11 +17,26 @@ export class App {
   private readonly titleService = inject(Title);
   private readonly translocoService = inject(TranslocoService);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly router = inject(Router);
+
+  protected readonly footerSloped = signal(this.isSubpage(this.router.url));
 
   constructor() {
     this.translocoService
       .selectTranslate('pageTitle')
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((title) => this.titleService.setTitle(title));
+
+    this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe((event) => this.footerSloped.set(this.isSubpage(event.urlAfterRedirects)));
+  }
+
+  private isSubpage(url: string): boolean {
+    const path = url.split(/[?#]/, 1)[0];
+    return path !== '' && path !== '/';
   }
 }

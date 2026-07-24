@@ -1,9 +1,19 @@
 <nav [attr.aria-label]="'nav.label' | transloco">
   <ul>
-    <li><a href="#about" (click)="linkSelected.emit()">{{ 'nav.about' | transloco }}</a></li>
-    <li><a href="#skills" (click)="linkSelected.emit()">{{ 'nav.skills' | transloco }}</a></li>
     <li>
-      <a href="#portfolio" (click)="linkSelected.emit()">{{ 'nav.portfolio' | transloco }}</a>
+      <a routerLink="/" fragment="about" (click)="linkSelected.emit()">
+        {{ 'nav.about' | transloco }}
+      </a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="skills" (click)="linkSelected.emit()">
+        {{ 'nav.skills' | transloco }}
+      </a>
+    </li>
+    <li>
+      <a routerLink="/" fragment="portfolio" (click)="linkSelected.emit()">
+        {{ 'nav.portfolio' | transloco }}
+      </a>
     </li>
   </ul>
 </nav>

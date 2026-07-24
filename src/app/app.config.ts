@@ -1,6 +1,6 @@
 import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig, isDevMode, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideTransloco } from '@jsverse/transloco';
 
 import { routes } from './app.routes';
@@ -10,7 +10,13 @@ import { TranslocoHttpLoader } from './core/i18n/transloco-http-loader';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled',
+      }),
+    ),
     provideHttpClient(),
     provideTransloco({
       config: {
